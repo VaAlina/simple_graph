@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Graph</title>
+</head>
+<body>
+
+<h1>Graph</h1>
+
+<canvas id="myCanvas" width="500" height="400" style="border:1px solid #c3c3c3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#abc";
+
+var graphColumn = [];
+graphColumn.push({id:0, value:200});
+graphColumn.push({id:1, value:100});
+graphColumn.push({id:2, value:80});
+graphColumn.push({id:3, value:150});
+
+var a = 0, d = 100;
+for(var i = 0; i < graphColumn.length; i++){
+    d = graphColumn[i].value;
+    a += 20; 
+    ctx.fillRect(a, 400-d, 10, d);
+}
+
+</script>
+
+</body>
+</html>
